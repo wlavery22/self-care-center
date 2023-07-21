@@ -1,3 +1,37 @@
+* { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); }
+
+body {
+    .gradient {
+        background-color: #134d71;
+        background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+        align: center;
+      }
+    
+  }
+
+header {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* div {
+    height: 250px;
+    background-color: #ff8a00;
+    background-image: linear-gradient(#ff8a00, #e52e71);
+  } */
+
+
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
