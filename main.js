@@ -39,7 +39,7 @@ var receiveButton = document.querySelector("button");
 var meditator = document.querySelector("#meditator")
 
 // eventListeners:
-button.addEventListener('click', showMessage);
+button.addEventListener("click", showMessage);
 
 // functions / eventHandlers:
 function getRandomIndex(array) {
@@ -49,7 +49,7 @@ function getRandomIndex(array) {
 function showMessage(event) {
     event.preventDefault();
     meditator.hidden = true;
-    suggestionBox.classList.remove('hidden');
+    suggestionBox.classList.remove("hidden");
     if (affirmationButton.checked) {
       var affirmationMessage = affirms[getRandomIndex(affirms)];
       suggestedItem.innerText = affirmationMessage;
