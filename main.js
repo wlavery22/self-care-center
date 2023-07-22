@@ -32,6 +32,31 @@ var mantras = [
 "I am the sky, the rest is weather."
 ];
 
+// querySelectors:
+var affirmationButton = document.querySelector("#affirmation");
+var mantraButton = document.querySelector("#mantra");
+var receiveButton = document.querySelector("button");
+var meditator = document.querySelector("#meditator")
+
+// eventListeners:
+button.addEventListener('click', showMessage);
+
+// functions / eventHandlers:
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
   };
+
+function showMessage(event) {
+    event.preventDefault();
+    meditator.hidden = true;
+    suggestionBox.classList.remove('hidden');
+    if (affirmationButton.checked) {
+      var affirmationMessage = affirms[getRandomIndex(affirms)];
+      suggestedItem.innerText = affirmationMessage;
+    } else if (mantraButton.checked) {
+        var mantraMessage = mantras[getRandomIndex(mantras)];
+        suggestedItem.innerText = mantraMessage;
+    } else {
+        
+    }
+}
