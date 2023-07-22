@@ -36,7 +36,11 @@ var mantras = [
 var affirmationButton = document.querySelector("#affirmation");
 var mantraButton = document.querySelector("#mantra");
 var receiveButton = document.querySelector("button");
-var meditator = document.querySelector("#meditator")
+var meditator = document.querySelector("#meditator");
+var messageView = document.querySelector(".message-view");
+var messageSelect = document.querySelector(".message-select");
+var suggestedMessage = document.querySelector(".suggested-message");
+
 
 // eventListeners:
 button.addEventListener('click', showMessage);
@@ -49,14 +53,13 @@ function getRandomIndex(array) {
 function showMessage(event) {
     event.preventDefault();
     meditator.hidden = true;
-    suggestionBox.classList.remove('hidden');
+    suggestedMessage.classList.remove('hidden');
     if (affirmationButton.checked) {
       var affirmationMessage = affirms[getRandomIndex(affirms)];
-      suggestedItem.innerText = affirmationMessage;
+      suggestedMessage.innerText = affirmationMessage;
     } else if (mantraButton.checked) {
         var mantraMessage = mantras[getRandomIndex(mantras)];
-        suggestedItem.innerText = mantraMessage;
-    } else {
-        
+        suggestedMessage.innerText = mantraMessage;
+    // } else {   
     }
 }
