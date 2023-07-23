@@ -5,19 +5,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>Self Care Center</header>
-    <div class="messageSelect">
-      <form id="form">
-          <p id="choose-message"<strong>Which type of message?</strong></p>
-          <input type="affirmation" id="affirmation" value="affirmation" name="affirmation" class="affirmation"><label for="affirmation">affirmation</label><br>
-          <input type="mantra" id="mantra" value="mantra" name="mantra" class="mantra"><label for="mantra">mantra</label><br>
-          <div><button type="submit">Receive Message</button></div>
-      </form>
+    <div class="wrap-header">
+      <header class="title"<strong>✨Self Care Center✨</strong></header>
     </div>
-    <div class="messageView">
-      <img id="meditator" src="/Users/dan/turing_work/mod1/self-care/self-care-center/assets/meditate.svg" alt="seated meditator">
-      <div class="hidden suggested-message">
-        <p class="suggested-message"></p>
+    <div class="wrap-message-select">
+      <div class="message-select">
+        <form id="form">
+          <p id="choose-message"<strong>Which type of message?</strong></p>
+          <div class="radio-buttons">
+            <input type="radio" id="affirmation" value="affirmation" name="affirmation" class="affirmation"><label for="affirmation">affirmation</label><br>
+            <input type="radio" id="mantra" value="mantra" name="mantra" class="mantra"><label for="mantra">mantra</label><br>
+          </div>
+          <div><button type="submit">Receive Message</button></div>
+        </form>
+      </div>
+    </div>
+    <div class="wrap-message-view">
+      <div class="message-view">
+        <img id="meditator" src="/Users/dan/turing_work/mod1/self-care/self-care-center/assets/meditate.svg" alt="seated meditator">
+        <div class="hidden wrap-suggested-message">
+          <p class="suggested-message"></p>
+        </div>
       </div>
     </div>
 
