@@ -32,6 +32,8 @@ var mantras = [
 "I am the sky, the rest is weather."
 ];
 
+var currentMessage;
+
 // querySelectors:
 var affirmationButton = document.querySelector("#affirmation");
 var mantraButton = document.querySelector("#mantra");
@@ -40,7 +42,7 @@ var meditator = document.querySelector("#meditator");
 var messageView = document.querySelector(".message-view");
 var messageSelect = document.querySelector(".message-select");
 var suggestedMessage = document.querySelector(".suggested-message");
-
+var wrapSuggestedMessage = document.querySelector(".wrap-suggested-message");
 
 // eventListeners:
 button.addEventListener('click', showMessage);
@@ -50,16 +52,16 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
   };
 
-function showMessage(event) {
-    event.preventDefault();
-    meditator.hidden = true;
-    suggestedMessage.classList.remove('hidden');
+function showMessage() {
+  // event.preventDefault();
+  meditator.classList.add('hidden');
+  wrapSuggestedMessage.classList.remove('hidden');
     if (affirmationButton.checked) {
-      var affirmationMessage = affirms[getRandomIndex(affirms)];
-      suggestedMessage.innerText = affirmationMessage;
+      currentMessage = affirms[getRandomIndex(affirms)];
+      suggestedMessage.innerText = currentMessage;
     } else if (mantraButton.checked) {
-        var mantraMessage = mantras[getRandomIndex(mantras)];
-        suggestedMessage.innerText = mantraMessage;
+      currentMessage = mantras[getRandomIndex(mantras)];
+      suggestedMessage.innerText = currentMessage;
     // } else {   
     }
 }
