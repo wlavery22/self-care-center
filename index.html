@@ -6,23 +6,26 @@
   </head>
   <body>
     <div class="wrap-header">
-      <header class="title"<strong>✨Self Care Center✨</strong></header>
+      <header class="title"><strong>✨Self Care Center✨</strong></header>
+    </div>
+    <div class="wrap-choose-message">
+      <h1 id="choose-message"><strong>Which type of message?</strong></h1>
     </div>
     <div class="wrap-message-select">
       <div class="message-select">
         <form id="form">
-          <p id="choose-message"<strong>Which type of message?</strong></p>
           <div class="radio-buttons">
-            <input type="radio" id="affirmation" value="affirmation" name="affirmation" class="affirmation"><label for="affirmation">affirmation</label><br>
-            <input type="radio" id="mantra" value="mantra" name="mantra" class="mantra"><label for="mantra">mantra</label><br>
+            <input type="radio" id="affirmation" value="affirmation" name="messageType" class="affirmation"><label for="affirmation">affirmation</label><br>
+            <input type="radio" id="mantra" value="mantra" name="messageType" class="mantra"><label for="mantra">mantra</label><br>
           </div>
-          <div><button type="submit">Receive Message</button></div>
+          <button class="submit" type="submit">Receive Message</button>
+          <button class="reset" type="reset" hidden>Clear</button>
         </form>
       </div>
     </div>
     <div class="wrap-message-view">
       <div class="message-view">
-        <img id="meditator" src="/Users/dan/turing_work/mod1/self-care/self-care-center/assets/meditate.svg" alt="seated meditator">
+        <img id="meditator" src="assets/meditate.svg" alt="seated meditator">
         <div class="hidden wrap-suggested-message">
           <p class="suggested-message"></p>
         </div>
