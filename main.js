@@ -37,31 +37,47 @@ var currentMessage;
 // querySelectors:
 var affirmationButton = document.querySelector("#affirmation");
 var mantraButton = document.querySelector("#mantra");
-var receiveButton = document.querySelector("button");
+var receiveButton = document.querySelector(".submit");
 var meditator = document.querySelector("#meditator");
 var messageView = document.querySelector(".message-view");
 var messageSelect = document.querySelector(".message-select");
 var suggestedMessage = document.querySelector(".suggested-message");
 var wrapSuggestedMessage = document.querySelector(".wrap-suggested-message");
+var resetButton = document.querySelector(".reset");
 
 // eventListeners:
-button.addEventListener('click', showMessage);
+receiveButton.addEventListener('click', showMessage);
+resetButton.addEventListener('click', clearForm);
 
 // functions / eventHandlers:
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
   };
 
-function showMessage() {
-  // event.preventDefault();
-  meditator.classList.add('hidden');
+function showMessage(event) {
+  event.preventDefault();
   wrapSuggestedMessage.classList.remove('hidden');
+  resetButton.hidden = false;
     if (affirmationButton.checked) {
+      resetButton.hidden = false;
+      meditator.classList.add('hidden');
       currentMessage = affirms[getRandomIndex(affirms)];
       suggestedMessage.innerText = currentMessage;
     } else if (mantraButton.checked) {
+      resetButton.hidden = false;
+      meditator.classList.add('hidden');
       currentMessage = mantras[getRandomIndex(mantras)];
-      suggestedMessage.innerText = currentMessage;
-    // } else {   
+      suggestedMessage.innerText = currentMessage; 
     }
+}
+function clearForm() {
+  suggestedMessage.innerText = "";
+  meditator.classList.remove('hidden');
+  showresetButton()
+  // resetButton.classList.add('hidden');
+  // resetButton.hidden = true;
+}
+
+function showresetButton() {
+  resetButton.hidden = false;
 }
